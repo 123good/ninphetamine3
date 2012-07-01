@@ -1704,3 +1704,7 @@ endif
 config SAMSUNG_PRODUCT_SHIP
 	bool "set up for product shippling"
 	default n
+
+config AOSP_NINPHETAMIN3
+	bool "AOSP support for Ninphetamin3"
+	default n

@@ -40,12 +40,14 @@
 
 #define SAMSUNG_MFC_DEV_NAME           "/dev/s3c-mfc"
 
-#if AOSP_NINPHETAMIN3
+#if defined (CONFIG_AOSP_NINPHETAMIN3)
 #define SUPPORT_SLICE_ENCODING        0
-#else if defined(CONFIG_CPU_EXYNOS4212) || defined(CONFIG_CPU_EXYNOS4412)
+#else
+#if defined(CONFIG_CPU_EXYNOS4212) || defined(CONFIG_CPU_EXYNOS4412)
 #define SUPPORT_SLICE_ENCODING        1
 #else
 #define SUPPORT_SLICE_ENCODING        0
+#endif
 #endif
 
 /*--------------------------------------------------------------------------------*/
