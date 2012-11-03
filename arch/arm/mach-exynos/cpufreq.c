@@ -32,6 +32,11 @@
 #include <plat/pm.h>
 #include <plat/cpu.h>
 
+#if defined(CONFIG_MACH_PX) || defined(CONFIG_MACH_Q1_BD) ||\
+	defined(CONFIG_MACH_P4NOTE) || defined(CONFIG_MACH_GC1)
+#include <mach/sec_debug.h>
+#endif
+
 struct exynos_dvfs_info *exynos_info;
 
 static struct regulator *arm_regulator;

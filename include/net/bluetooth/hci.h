@@ -23,6 +23,8 @@
 */
 #ifdef CONFIG_BT_MGMT
 #include "hci_mgmt.h"
+#elif defined(CONFIG_BT_TIZEN)
+#include "tizen/hci.h"
 #else
 #ifndef __HCI_H
 #define __HCI_H
@@ -87,6 +89,7 @@ enum {
 	HCI_SERVICE_CACHE,
 	HCI_LINK_KEYS,
 	HCI_DEBUG_KEYS,
+	HCI_UNREGISTER,
 
 	HCI_RESET,
 };
